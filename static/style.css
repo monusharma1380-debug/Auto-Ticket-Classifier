@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root {
+  --slate: #1C2530;
+  --bg: #F7F5F2;
+  --card: #FFFFFF;
+  --high: #C1440E;
+  --medium: #4A7A6E;
+  --low: #8A93A3;
+  --text: #1C2530;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--slate);
+  color: white;
+  padding: 1.25rem 2rem;
+}
+
+header h1 { font-size: 1.25rem; font-weight: 600; }
+
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.toolbar button {
+  background: var(--slate);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+#statusMsg { font-size: 0.85rem; color: var(--low); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+
+th {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 2px solid var(--bg);
+  font-weight: 600;
+}
+
+td { padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--bg); }
+
+.stat-number { font-family: 'IBM Plex Mono', monospace; font-size: 2rem; font-weight: 500; }
+.stat-label { font-size: 0.85rem; color: var(--low); }
+
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.file-picker {
+  border: 1.5px dashed var(--low);
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  background: var(--card);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.file-picker:hover {
+  border-color: var(--slate);
+  background: var(--bg);
+}

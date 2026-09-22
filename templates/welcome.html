@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Ticket Auto-Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Route the right ticket<br>to the right team, instantly.</h1>
+      <p>Upload a batch of support tickets. Get category, priority, and a routing suggestion back in seconds — with the model's confidence shown, not hidden.</p>
+      <a href="/dashboard" class="cta">Get Started</a>
+    </div>
+
+    <div class="hero-visual">
+      <div class="ticket-card high">
+        <span class="dot"></span>
+        <div class="line w-80"></div>
+        <div class="line w-60"></div>
+      </div>
+      <div class="ticket-card medium">
+        <span class="dot"></span>
+        <div class="line w-70"></div>
+        <div class="line w-50"></div>
+      </div>
+      <div class="ticket-card low">
+        <span class="dot"></span>
+        <div class="line w-60"></div>
+        <div class="line w-40"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Category + Priority</h3>
+      <p>Predicts which team should own a ticket and how urgent it is, from the ticket text alone.</p>
+    </div>
+    <div class="feature">
+      <h3>Confidence-aware</h3>
+      <p>Trained on class-imbalanced real data — built to flag uncertainty instead of guessing silently.</p>
+    </div>
+    <div class="feature">
+      <h3>scikit-learn under the hood</h3>
+      <p>TF-IDF + Naive Bayes, trained on 16,000+ real support tickets. No external API calls.</p>
+    </div>
+  </div>
+</body>
+</html>

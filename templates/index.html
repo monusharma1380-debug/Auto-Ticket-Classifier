@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Ticket Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>Support Ticket Auto-Classifier</h1></header>
+
+ <div class="toolbar">
+  <label for="csvFile" class="file-picker">
+    <span id="fileLabel">Choose file (CSV, Excel, or JSON)</span>
+  </label>
+  <input type="file" id="csvFile" accept=".csv,.xlsx,.xls,.json" hidden>
+  <button onclick="analyzeTickets()">Analyze</button>
+  <span id="statusMsg"></span>
+</div>
+
+  <div class="layout">
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Ticket</th><th>Category</th><th>Priority</th><th>Route</th></tr>
+        </thead>
+        <tbody id="ticketTable"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="stat-label">Total Tickets</div>
+      <div class="stat-number" id="totalCount">0</div>
+      <div class="stat-label" style="margin-top:1rem;">High Priority</div>
+      <div class="stat-number" id="highCount">0</div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

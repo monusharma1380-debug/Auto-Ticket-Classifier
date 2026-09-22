@@ -1,0 +1,23 @@
+# Virtual environment
+.proj_2/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables (API keys waghera)
+.env
+
+# OS/Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Kaggle downloads (agar kahin project ke andar cache ho jaye)
+.kaggle/
+
+# Jupyter checkpoints (agar kabhi notebook use ki ho)
+.ipynb_checkpoints/
