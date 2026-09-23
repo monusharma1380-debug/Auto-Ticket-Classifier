@@ -2,6 +2,7 @@ import pandas as pd
 from flask import Flask, render_template, request, jsonify
 from utils.classify import classify
 import os
+import openpyxl
 
 
 app = Flask(__name__)
